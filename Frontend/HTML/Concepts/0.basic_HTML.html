@@ -1,0 +1,209 @@
+<!-- HTML Basic Notes 
+
+[Topics]
+-- 1.) Basic TAGS
+-- 2.) HTML Lists
+-- 3.) Divs. and Spans in HTML
+-- 4.) HTML Attributes (Link Image, Link a URL or hyperlink)
+
+-------------------------- BASIC TAGS -------------------------- 
+
+Reference : https://developer.mozilla.org/en-US/docs/Web/HTML  (Go to "References" - "HTML elements" ) {To know more about HTML's N number of tags in details}
+
+A. <!DOCTYPE html> (Tag tells the Script / document, to behave  as HTML doc)
+B. "<!--" Start Tag = Comment Tag 
+C. "<html lang="en" dir="ltr">"  Code Tag  (To start HTML Codes Body)
+    </html> (To End HTML codes' body)
+    -  In HTML , End Tags,  Mostly have "</tagname>"  (Forward slash, while ending the data tagged to that specific Piece)
+
+D. HTML Essential Code Tags 
+    1.) <title> TITLE OF THE WEBSITE </title> (Tags used to write title of the website)
+    2.) <head> METADATA </head>  (Consists of Meta data, as Header of the Website, To give context about the data/body, but not actual body/data)
+        - <meta charset = "utf-8"> (Argument to Add in Metadatas', w.r.t. Kind/Type of character set)
+    
+    3.) <body> </body> ( Body Tags // Consists of the Main body {ACTUAL Elements} that are seen on the page )
+    4.) <h1>Header One</h1>  ( Header Tags // Provides BOLD & Large SIZE Fonts ,, from (h1 to h6) in decreasing order)
+        <h2>Header Two</h2> 
+        <h3>Header Three</h3> 
+        <h4>Header Four</h4> 
+        <h5>Header Five</h5> 
+        <h6>Header Six</h6> 
+
+    5.) <p> Paragraph Text </p> (Paragraph Tags // To Seperate Text OR paragraphs, with Spaces, use these tags)
+    6.) Inline Tags
+        - <strong> Text </strong> (Strong Tags // Convert to BOLD)
+        - <em> Text </em> (Emphasis Tag // Convert to ITALIC)
+
+
+---------------------------HTML LISTs------------------------------- 
+
+A.) 2 Types of List (Un-Ordered & Ordered)
+
+    1.) <ol>                   (Ordered List Tag // Used to ORDER list Items By NUMBERING them)
+           <li> Item-1 </li>   (List Items Tag // Used to LIST Items )
+           <li> Item-2 </li>
+           <li> item-3 </li>
+        </ol>
+
+    2.) <ul>                   (Ordered List Tag // Used to DOESN'T ORDER list Items By them)
+           <li> Item-1 </li>   (List Items Tag // Used to LIST Items )
+           <li> Item-2 </li>
+           <li> item-3 </li>
+        </ul>
+
+B.) Nested Lists (Un-Ordered & Ordered)
+
+    1.) <ol>                   (Ordered List Tag // Used to ORDER list Items By NUMBERING them)
+           <li> Item-1 </li>   (List Items Tag // Used to LIST Items )
+           <li> Item-2 </li>
+           <ul>                  (Nested List)
+               <li> Item-a </li>
+               <li> Item-b </li>
+           </ul>
+           <li> item-3 </li>
+           <ol>
+               <li> Item-a </li>
+               <li> Item-b </li>
+           </ol>
+        </ol>
+
+
+---------------------------Divs & Spans [ Use-Cases for STYLING mostly]------------------------------- 
+-> Divisions & Spans allow us to Divide the HTML script as required
+   - And help us Style, ONLY those certain areas that we want to style
+   - Division & Spans will be really helpful while styling the Web-Page using CSS and Bootstrap
+
+   1.) <div class="">  (Division Tag // To Divide certain piece of Code & Style that part only)
+       </div>
+    
+   2.) <span> some text </span> (Span Tag // For Styling some Text that is "Already a SYNTAX")
+
+----------------------------------- HTML Attributes --------------------------------------
+
+-> Attributes, allow the website to attach links , and images to the website, from online / local machine as well.
+    
+
+   1.) Attach URL - LINK to website
+   <a href = link.com >LinkTitle</a>  ( Anchor Element // with "href" converts a URL to HyperLink)
+    
+   2.) Attach IMAGE to website
+   <img src = "image location/ source" alt = "Alternative Text or Image Source"> ( Image Attribute // with "src" acts as source for Image in the website)
+       
+      - "src" (source) || Images' source can be a {URL / link / local path / Another Script} as well
+      - "alt" (alternative) || Alternative, if the Source fails / missing, can be a {Error text / Another Image source} as well
+
+-->
+
+<!-- NOTES
+
+1. "Title" tags will always inside with main <head> </head> tags
+2. Start typing "Lorem" it will give you a bunch of random text to test your website
+3. Images' Re-Size, and Profiling can be done using CSS. 
+-->
+
+
+
+
+<!-- DOCTYPE represents that the File is an HTML file -->
+<!DOCTYPE html>
+<!-- When you type a Starting "Tag" in HTML -> It gives the {"Start" & "End"} tag as well-->
+<html lang="en" dir="ltr">
+   
+   <!-- "<head>" Start & End Tags, mostly consist of META data -->
+   <head>
+       <meta charset="utf-8">
+       <h1>Header</h1>
+       <title> Basic HTML DryRun</title>
+   </head>
+   
+   <!-- Body of HTML script, consists of {MAIN ELEMENTS}, shown in the Page -->
+
+   <body>
+
+       <!-- Header/ Heading Tags, give "Bold" & "Large Size Fonts" going from {h1 to h6}, in decreasing order of size of fonts-->
+       <h1>Resume</h1>
+       <p>paragraph in body, with header One</p>
+       <h2>Heading Two!</h2>
+       <p>paragraph in body with header Two</p>
+       <h3>Heading Three!</h3>
+       <ul>
+           <li>paragraph in body with header Three, having a Header of level 6 for test
+           More text inside the paragraph under main heading Three in body 
+            <p><a href = https://developer.mozilla.org/en-US/docs/Web/HTML>HTML Resources website reference</a></p></li>
+       </ul>
+       <h4>Data Science Portfolio</h4>
+       <p> 
+           <em>
+           Data Science Professional, with hands-on experience in <strong>Feature Engineering</strong>, Modelling, and ML Deployement 
+           </em>
+           <p><a href=https://github.com/JayDS22>Github</a></p>
+        </p>
+
+       <h2>Skills</h2>
+       <p> List of Algorithms Known:
+           <ol>
+               <li><strong>Supervised Learning</strong></li>
+               <ul>
+                    <li>Linear Regression</li>
+                    <li>Logistic Regression</li>
+                    <li>Support Vector Machines</li>
+                    <li>Naive Bayes Classifiers</li>
+                    
+                    <li>Tree Based Algorithms</li>
+                </ul>
+               <li><strong>Un-supervised Learning</strong></li>
+               <ul>
+                   <li>Principal Component Analysis</li>
+                   <li>K-Means Clustering</li>
+                   <li>Hierarchal Clustering</li>
+                   <li>Neural Nets</li>
+                   <li>KNN></li>
+               </ul>
+           </ol>
+       </p>
+
+       <p> Tech-Stack:
+            <ul>
+                <li><strong>Languages</strong></li>
+                <ul>
+                    <li>Python</li>
+                    <li>R Programming</li>
+                    <li>MATLAB</li>
+                    <li>Ocatve</li>
+                    <li>Javascript</li>
+                    <li>Typescript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>DAX</li>
+                </ul>
+                <li><strong>Frontend</strong></li>
+                <ul>
+                    <li>Tableau</li>
+                    <li>Power BI</li>
+                    <li>Stream - Lit</li>
+                    <li>Google Data Studio</li>
+                </ul>
+                <li><strong>Backend</strong></li>
+                <ul>
+                    <li>PyCharm</li>
+                    <li>Keras</li>
+                    <li>Tensorflow</li>
+                    <li>Sci-Kit Learn</li>
+                </ul>
+            </ul>
+       </p>
+
+       <h3>Contact Details</h3>
+       --------------------------
+       <p> <strong>Email:</strong> guwalanijj@gmail.com  <strong>|| Cell Number:</strong> +919714666941 <strong>|| Twitter:</strong> guwalani_jay </p>
+       
+       <h3>Image Attributes Demo</h3>
+       --------------------------
+       <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80" alt="Image is not available">
+       <img src="jungle.jpg" alt="Image is not available">
+   </body>
+
+</html>
+
+
+<!-- Test Run: "Copy Path" of this File & Open on browser, Keep changing & keep testing-->

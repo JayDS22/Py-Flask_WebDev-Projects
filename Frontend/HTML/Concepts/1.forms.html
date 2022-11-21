@@ -1,0 +1,138 @@
+<!-- HTML Basic Notes  - Page 2
+
+[Topics]
+-- Forms in HTML
+    - Basics
+    - Labels
+    - Selections
+
+
+-------------------------- FORMS -------------------------- 
+>>>>>>>>>> Understanding
+
+- Use "<form>" tags to set up a Form -> Then we Add "<input>" tags to accept user information.
+    Every major form element already has a corresponding <input> tag attribute.
+    Add <submit> input type to submit the info.
+
+
+
+Reference : https://developer.mozilla.org/en-US/docs/Web/HTML  (Go to "References" - "HTML elements" ) {To know more about HTML's N number of tags in details}
+
+A. <form class="" action="" method=""> </form> (Form Tags // Used to Capture User or Any kind of Information, given as I/p on Web page
+    - Action = "Source_to_redirect_to" (When the Form I/P info. is Submitted, what Action should the Page perform  OR which script/source should the form render to)
+        - Performs Re-Direct Action (Can I/P a http URL )
+    - Method = "methodName" (GET | POST | PUT | DELETE etc...)
+        - POST: This method submits data to be processed. 
+        - GET: Methods takes in Data, to give some Values as O/P
+    
+    A0. <label for="">LABELNAME</label> (Label Tag // Used to Add Labels, in order to identify the boxes)
+        - For = "keyName" (This key name in "Label" will refer to a certain "Input" Command)
+
+    A1. <input id = "" type="" name="" value="" placeholder=""> (Input Tags // Gives Space , Blanks to give Input information to the form)
+        - Id = "key_id" (For Reference to Label, should be similar to labels value)
+        - Type = "text | password | integer" (Type usually defines the type of input info. to put in)
+            - Types {email, password, text, submit, color }
+
+              1. email    (only takes email as input)
+              2. password (shows password as hidden dots)
+              3. text     (only takes text inputs)
+              4. submit   (used to submit the data filled in input tags)
+              5. color    (used to add color window in site)
+              6. radio    (only takes one selection like mcqs, at a time)
+                 - Make sure Radio buttons, are have same "name" so that they are linked (to avoid multiple choices)
+
+        - Name = "name" (Name acts like a Unique Identifier for the "Input" tag)
+            - name is going to be associated with the info. that is passed back in the input tags
+
+        - Value = "value" (Value, takes the Input Info. and Shared that to linked logics/scripts/pages, as Info.)
+            - For, Input Type = "submit"  (We need to put in a Value, to make that Input tag understandable) 
+            - If Value = "" (empty), then Input tag is able to take the information from the website
+        
+        - Placeholder = "placeholdingtext" (placeholder vanishes when OG value is typed in the Input tags, in forms)
+
+
+
+
+B. <br> (Break Tag // To introduce break b/w any number of elements in the website)
+
+C. <select name=""> (DropDown List Option)
+        <option value="">OptionName</option>
+        <option value="">OptionName</option>
+        <option value="">OptionName</option>
+        .
+        .
+   </select>
+
+D. <textarea name="" rows="" cols=""> (TEXT AREA, in Forms, to give text inputs)
+   </textaread>
+
+   - rows & cols, numeric values are used to adjust the size of text area
+
+
+>>>>>>>>>> NOTES:
+
+ 1. In Input Tags, if Input Info. is not according to the defined TYPE of it, than the "Input" tag won't consider that info.
+   - e.g. type = "email" || I/P = jay guwalani || so it takes nothing in this data, as no (@, .com) etc.. present that defines with the type
+
+ 2. When creating "Form" Labels, {"for"} in <label> & {"id"} <input> , should have same KEY_ID
+
+ 3. Adding a "Placeholder" in Input Tags , inside a form is more common practice that adding a predetermined "value" 
+
+ 4. When Adding "Radio Buttons" as Input Tags, "name" (of both the tags should be same, in order to be linked, so that only One can be selected at a time) 
+
+ 5. If we dont have "Action" attribute with the form, we just end up refreshing the page (with {name : value} pairs in the URL)
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>
+        Websites Access 
+        </title>
+    </head>
+    <body>
+        <form class="" action="https://www.google.com" method="get">
+            <h1>Multiple Forms</h1>
+            <h2>Google Web Access</h2>
+            <label for="emailtag">Email:</label>
+                <input id="emailtag" type="email" name="useremail" value="" placeholder="Your Email ID">
+            <br> <!-- break Element-->
+            <label for="passcode">Password:</label>
+                <input id="passcode" type="password" name="password" value="" placeholder="Your password">
+            <br>
+            <label for="colortag">Choose your Favorite T-Shirt Color:</label>
+                <input id="colortag"type="color" name="" value="">
+            <br>
+            <p><input type="submit" name="" value="Submit"></p>
+        </form>
+        <!-- Form -2 (With Different Action Redirect)-->
+        <form class="" action="https://www.thesprucepets.com/best-dog-food-brands-4843452" method="get">  
+            <h2>Select any one dog breed below to check out best dog foods available:</h2>
+            <label for="dog1">Labrador</label>
+                <input id = "dog1" type="radio" name="dog" value="dog1">
+            <label for="dog2">German Sheperd</label>
+                <input id = "dog2" type="radio" name="dog" value="dog2">  
+            <label for="dog3">Pommerian</label>
+                <input id = "dog3" type="radio" name="dog" value="dog3">  
+            <br>
+            <p><h3>How would you rate your experience with this site?</h3></p>
+            <select name="stars">
+                <option value="Great">5</option>
+                <option value="Good">4</option>
+                <option value="Moderate">3</option>
+                <option value="Not Good">2</option>
+                <option value="Bad">1</option>
+            </select>
+            <br>
+            <p><h3>Any suggestions ?</h3></p>
+            <textarea name="textbox" rows="8" cols="100"></textarea>
+            <p><input type="submit" name="" value="Submit"></p>
+        </form>
+    </body>
+
+</html>
+
+<!-- When Using Above Script, it Opens' Google Web Browser, after adding a correct Email & Password,
+BUT in URL, it shows https://www.google.com/?useremail=guwalanijj%40gmail.com&password=Jay%407474
+
+Thus, we will learn from better validation and storage methods for the same-->
