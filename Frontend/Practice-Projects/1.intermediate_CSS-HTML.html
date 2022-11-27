@@ -1,0 +1,189 @@
+<!-- HTML -CSS Intermediate 
+
+[Topics]
+-- 1.) Classes & IDs
+-- 2.) HTML Lists
+-- 3.) Divs. and Spans in HTML
+-- 4.) HTML Attributes (Link Image, Link a URL or hyperlink)
+
+-------------------------- BASIC HTML - CSS linking -------------------------- 
+
+A. Classes :: 
+
+  - Assign Classes to any kind of HTML elements
+  - Have this same "className" in CSS script to refer to
+    
+  SYNTAX-1 (in HTML):  
+
+  <element class="className">
+
+B. IDs ::
+
+  - Assign IDs to any kind of HTML elements
+  - Have this same "ID" in CSS script to refer to
+
+  SYNTAX-2 (in HTML):
+
+  <element id="idString"
+
+-------------------------- Inspection of Websites on Browser-------------------------- 
+
+- You can use "Inspect" on any website, in any browser & Edit the HTML-CSS script in browser for that website, on live
+- This will only edit your view of the Browser.
+- Used to explore other websites, and their styling.
+
+-------------------------- Fonts -------------------------- 
+
+A. Classes :: 
+
+  - Assign Classes to any kind of HTML elements
+  - Have this same "className" in CSS script to refer to
+    
+  SYNTAX-1 (in HTML):  
+
+  <element class="className">
+
+B. IDs ::
+
+  - Assign IDs to any kind of HTML elements
+  - Have this same "ID" in CSS script to refer to
+
+  SYNTAX-2 (in HTML):
+
+  <element id="idString"
+
+-->
+
+
+
+
+<!-- DOCTYPE represents that the File is an HTML file -->
+<!DOCTYPE html>
+<!-- When you type a Starting "Tag" in HTML -> It gives the {"Start" & "End"} tag as well-->
+<html lang="en" dir="ltr">
+   
+   <!-- "<head>" Start & End Tags, mostly consist of META data -->
+   <head>
+       <meta charset="utf-8">
+       <h1>HTML-CSS Practice</h1>
+       -----------------------------------------
+       <link rel="stylesheet" href="1.intermediate_CSS.css">
+       <title>Intermediate HTML DryRun</title>
+   </head>
+   
+   <!-- Body of HTML script, consists of {MAIN ELEMENTS}, shown in the Page -->
+
+   <body>
+
+       <!-- Header/ Heading Tags, give "Bold" & "Large Size Fonts" going from {h1 to h6}, in decreasing order of size of fonts-->
+       <p>paragraph in body, with header One</p>
+       <h2>Divs & Spans Practice</h2>
+       <p>I am Outside Div!</p>
+
+       <!-- Initializing 3 Divisions in order to test w.r.t. Seperate Classes & IDs-->
+       <div class="firstdiv">
+           <p>Inside Div! - One</p>
+       </div>
+
+       <div class="seconddiv">
+           <p>Inside Div! - Two</p>
+       </div>
+
+       <div class="firstdiv">
+           <p>Inside Div! - Three...<span>Inside Div & Span</span></p>
+       </div>
+
+       <h3 id="ref_material_id">HTML Reference Material</h3>
+       <ul>
+           <li>paragraph in body with header Three, having a Header of level 6 for test
+           More text inside the paragraph under main heading Three in body 
+            <p><a href = https://developer.mozilla.org/en-US/docs/Web/HTML>HTML Resources website reference</a></p></li>
+       </ul>
+       <h3>HTML-CSS Reference Material</h3>
+       <ol>
+           <li>CSS Property Types</li>
+           <ul>
+               <li>Color</li>
+               <ol> <p>3 techniques to utilize "Color" properties</p>
+                   <li>rbg(v1,v2,v3)</li>
+                   <li>rgba(v1,v2,v3,v4</li>
+                   <li>hex Color<a href="https://www.google.com/search?q=hex+color&oq=hex+color&aqs=chrome..69i57j0i433i512l2j0i20i263i512j0i512l6.2273j1j7&sourceid=chrome&ie=UTF-8"> Hex Colors</a></li>
+               </ol>
+           </ul>
+       </ol>
+       <h4>Data Science Portfolio</h4>
+       <p> 
+           <em>
+           Data Science Professional, with hands-on experience in <strong>Feature Engineering</strong>, Modelling, and ML Deployement 
+           </em>
+           <p><a href=https://github.com/JayDS22>Github</a></p>
+        </p>
+
+       <h2>Skills</h2>
+       <p> List of Algorithms Known:
+           <ol>
+               <li><strong>Supervised Learning</strong></li>
+               <ul>
+                    <li>Linear Regression</li>
+                    <li>Logistic Regression</li>
+                    <li>Support Vector Machines</li>
+                    <li>Naive Bayes Classifiers</li>
+                    
+                    <li>Tree Based Algorithms</li>
+                </ul>
+               <li><strong>Un-supervised Learning</strong></li>
+               <ul>
+                   <li>Principal Component Analysis</li>
+                   <li>K-Means Clustering</li>
+                   <li>Hierarchal Clustering</li>
+                   <li>Neural Nets</li>
+                   <li>KNN></li>
+               </ul>
+           </ol>
+       </p>
+
+       <p> Tech-Stack:
+            <ul>
+                <li><strong>Languages</strong></li>
+                <ul>
+                    <li>Python</li>
+                    <li>R Programming</li>
+                    <li>MATLAB</li>
+                    <li>Ocatve</li>
+                    <li>Javascript</li>
+                    <li>Typescript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>DAX</li>
+                </ul>
+                <li><strong>Frontend</strong></li>
+                <ul>
+                    <li>Tableau</li>
+                    <li>Power BI</li>
+                    <li>Stream - Lit</li>
+                    <li>Google Data Studio</li>
+                </ul>
+                <li><strong>Backend</strong></li>
+                <ul>
+                    <li>PyCharm</li>
+                    <li>Keras</li>
+                    <li>Tensorflow</li>
+                    <li>Sci-Kit Learn</li>
+                </ul>
+            </ul>
+       </p>
+
+       <h3>Contact Details</h3>
+       --------------------------
+       <p> <strong>Email:</strong> guwalanijj@gmail.com  <strong>|| Cell Number:</strong> +919714666941 <strong>|| Twitter:</strong> guwalani_jay </p>
+       
+       <h3>Image Attributes Demo</h3>
+       --------------------------
+       <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80" alt="Image is not available">
+       <img src="jungle.jpg" alt="Image is not available">
+   </body>
+
+</html>
+
+
+<!-- Test Run: "Copy Path" of this File & Open on browser, Keep changing & keep testing-->
