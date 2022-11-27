@@ -1,0 +1,117 @@
+/*
+--> Concepts 
+
+[CSS - HTML]
+
+{}
+   - Classes & IDs
+   - Fonts
+   - Borders and Backgrounds
+
+{}
+
+-------------- CSS-HTML Classes & IDs-------------- 
+
+
+-> Classes & IDs are used to Design a Speficic Element only 
+   - Used to overcome limitations of Divs & Spans
+   - Every HTML element accepts "Class" or "ID" attribute
+   - Identifiying "Class" / "ID" to every element, we can refer it and design accordingly.
+
+-> Classes are used to assign a CSS style to multiple diff. elements throughout the HTML script
+-> IDs are used to apply to a single element 
+   - IDs should be used for unique elements
+
+A. [Classes & IDs]
+
+  1. Connectors (To Link, Classes & IDs with a specific element.)
+    
+        - .(periods)    // for a CLASS call
+        - #             // for a ID call
+    
+
+  2. ".className" ( Class Referer  // used to style, ONLY elements of "Particular Class" )
+    --------
+    SYNTAX-1 (in CSS)
+
+    .className{
+        color: value;
+        background: value;
+        border: color_value;
+        border-width: 20px;
+        border-style: style;
+        border-radius: value; (in pt, px) 
+        ...      
+    }
+
+  3. "#id_name" (id referer // used to style , ONLY elemeys with a Unique ID)
+    --------
+    SYNTAX-2 (in CSS)
+
+    #id_Name{
+        color: value;
+        background: value;
+        border: color_value;
+        border-width: 20px;
+        border-style: style;
+        border-radius: value; (in pt, px) 
+        ...    
+    }
+ 
+    --------
+B. [Fonts]
+
+    element{
+        font-size: 10px;
+        font-weight: bold;
+        font-family: Arial;
+        font-style: italic;
+        text-align: center;
+    }
+
+    -------------------
+    - font-weight: bold / bolder / inherit
+    - font-family: Arial / Sans / etc... 
+          - Can also add "Google Fonts" referring to https://developers.google.com/fonts
+    - text-align: center / left / right
+    - font-style: italic / normal / oblique / inherit / unset
+
+----------------- NOTES ------------------
+
+1. Fonts of every (font_style) can't be bold / italic always.
+2. Using SAME "HTML Tags", will embed the styling on all such availble tags in HTML script in frontend.
+   - e.g. if <h1> is used in Header & Body 10 times, so all 10 <h1> related texts will be styled, if it is linked even one time in HTML scipt also
+
+
+*/
+/* [Classes & IDs based Styling*/
+.firstdiv{
+    color:brown;
+    border: black;
+}
+
+.seconddiv{
+    color:blueviolet;
+    border: black 6px dashed;
+}
+
+.thriddiv{
+    color: goldenrod;
+    border: darkblue 5px solid;
+}
+
+#ref_material_id{
+    color: darkred;
+    background-color: bisque;
+    border: brown 5px solid;
+}
+
+/* Fonts */
+
+p{
+    font-size: 10px;
+    font-weight: bolder;
+    font-family: Arial;
+    font-style: unset;
+    text-align: center;
+}

@@ -1,0 +1,166 @@
+/*
+--> Concepts 
+
+[CSS - HTML]
+
+{}
+   - Basic CSS Tagging & Properties
+   - Div. & Spans Styling
+   - Borders and Backgrounds
+
+{}
+
+--> STEPS::
+
+STEPS to Style HTML web fronts, using CSS
+1. Create a CSS file 
+2. Use CSS syntax to link element tags
+3. Add Style attribute name-value pairs
+4. Connect CSS to HTML
+
+--> Understanding::
+- CSS (Cascading Style Sheets)
+- CSS allows us to change style attributes of HTML elements
+
+ - color   
+ - Background
+ - Borders
+
+
+-------------- CSS-HTML Basic Tagging -------------- 
+A. "/*"  To Comment in CSS 
+
+B. Link CSS to HTML:: 
+
+  B0. SYNTAX  
+  
+  <link rel="stylesheet" href="/path/file.css">
+
+   - Rel = "relationtype"
+   - href ="CSS_filepath"
+
+   - Use this HTML syntax, in HTML file, where we need to implement the styling
+
+  B1.Using "HTML" tags in CSS & Creating Key-Value pairs in {}, to link with HTML file
+        - Styling Header tag(h1) in HTML 
+        - use "h1 {Property-Value} pairs" in CSS
+        
+       -> To Style Header with "<h1>" tag in HTML script 
+        h1{
+                property1: value;
+                property2: value;
+                ...
+                propertyN; value;
+            }
+
+C. Types of Properties in CSS
+
+  1. "color" (Color Property // can be used with 4 techniques 
+
+    tagname{
+        color: value;
+    }
+            - Direct I/P, 
+            - RGB shaded { rgb(v1, v2, v3) } || v1,v2,v3 are value proportions of RGB to be present, UL is 200
+            - Hex Color Methods { #number } Ref: https://www.google.com/search?q=hex+color&oq=hex+color&aqs=chrome..69i57j0i433i512l2j0i20i263i512j0i512l6.2273j1j7&sourceid=chrome&ie=UTF-8
+            - methods
+
+  2. "background" ( Background Property  // can be used to give Background Color to the body of HTML Website)
+    --------
+    SYNTAX-1
+    tagname{
+        background: value;
+    }
+    --------
+            - Direct I/P, 
+            - RGB shaded { rgb(v1, v2, v3) } || v1,v2,v3 are value proportions of RGB to be present, UL is 200
+            - Hex Color Methods { #number } Ref: https://www.google.com/search?q=hex+color&oq=hex+color&aqs=chrome..69i57j0i433i512l2j0i20i263i512j0i512l6.2273j1j7&sourceid=chrome&ie=UTF-8
+            - methods
+    --------
+    SYNTAX-2
+    tagname{
+        background: url(image_address);
+        background-repeat: no-repeat
+        backhround-position: 0value; 
+    }
+    --------
+       - background: url() (Used to add Image through URL in background)
+       - background-repeat: no-repeat (To stop repeatation of the images)
+       - background-position: 0value (Has multiple options, to set the images' position to be displayed, cented/ corner etc...
+
+    3. "border" ( Border Property  // can be used to give Border to the body of HTML Website)
+    --------
+    SYNTAX-1 (Basic)
+    tagname{
+        border: color_value;
+        border-width: 20px;
+        border-style: style;
+        border-radius: value; (in pt, px)
+    }
+    --------
+            - Give Color for a Border, 
+                - RGB shaded { rgb(v1, v2, v3) } || v1,v2,v3 are value proportions of RGB to be present, UL is 200
+                - Hex Color Methods { #number } Ref: https://www.google.com/search?q=hex+color&oq=hex+color&aqs=chrome..69i57j0i433i512l2j0i20i263i512j0i512l6.2273j1j7&sourceid=chrome&ie=UTF-8
+            - Give [Width] to border, w.r.t. particular value in (PX)
+            - Give [STYLE] to Border
+                - Solid 
+                - dashed
+            - Give [Radius] to Border's Corners
+                - 20pt (point)
+                - 20px (pixel)
+                - 20pc (pica)
+    --------
+    SYNTAX-2 (Shorthand)
+    tagname{
+        border: color_value 20px style;
+    }
+    --------
+    - Can Use all attributes w.r.t. "Border" in certain syntaxicial format
+----------------- NOTES ------------------
+
+1. Use SAME "HTML Tags" (h1, h2, h3, li, ol etc.. ) in CSS Script, to refer to a particular type of element.
+2. Using SAME "HTML Tags", will embed the styling on all such availble tags in HTML script in frontend.
+   - e.g. if <h1> is used in Header & Body 10 times, so all 10 <h1> related texts will be styled, if it is linked even one time in HTML scipt also
+
+
+*/
+
+h1{
+    color:blue;
+}
+
+li{
+    color: rgb(30,100,100);
+}
+
+p{
+    color:#eab01c;
+}
+
+h3{
+    color: rgba(13,90,140,1);
+}
+
+/* Giving Background to Entire Body of HTML script*/
+body{
+    background: whitesmoke;
+    border: darkslateblue;
+    border-radius: 30pt;
+    border-style: dashed;
+}
+div{
+    
+    background: url(https://plus.unsplash.com/premium_photo-1661924069957-bb493a999f27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+    background-repeat: no-repeat;
+    background-position: 0ex;
+    border: black;
+    border-width: 5px;
+    border-style: solid;
+
+}
+
+/* To give only styling to  data inside SPAN*/
+span{
+   color: pink;
+   border:  red 3px dashed;
+}
